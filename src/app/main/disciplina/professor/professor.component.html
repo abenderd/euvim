@@ -1,0 +1,5 @@
+<h3>Lista de Professores</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let professor of listaProfessores">{{professor.nome}} - {{professor.email}}</mat-list-item>
+    <mat-error *ngIf="listaProfessores.length == 0">Carregando ...</mat-error>
+  </mat-list>
