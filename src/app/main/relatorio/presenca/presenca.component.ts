@@ -8,6 +8,7 @@ import { RelatorioService } from '../relatorio.service';
   styleUrls: ['./presenca.component.scss']
 })
 export class PresencaComponent implements OnInit {
+  public filtred: boolean;
   
   public relatorio= [];
   
@@ -32,6 +33,8 @@ export class PresencaComponent implements OnInit {
   }
 
   gerarRelatorio () {
+    this.filtred=true;
+    this.relatorio=null;
     this._relatorioService.listarPresencaPorDisciplina(this.form.value).subscribe(suc => {
       this.relatorio = suc;
     })
