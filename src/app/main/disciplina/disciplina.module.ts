@@ -40,6 +40,7 @@ import { DisciplinaService } from '../services/disciplina.service';
   providers: [
     FormBuilder,
     DisciplinaService,
+    ProfessorService,
     QrcodeService,
     HttpClient,
     {provide: MAT_DATE_LOCALE, useValue: 'pt-br'}
