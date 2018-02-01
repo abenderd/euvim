@@ -7,6 +7,8 @@ import { MatExpansionModule, MatIconModule, MatButtonModule, MatFormFieldModule,
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { DisciplinaService } from '../services/disciplina.service';
+import { RelatorioService } from './relatorio.service';
 
 @NgModule({
   imports: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   declarations: [PresencaComponent],
   providers: [
-    FormBuilder
+    FormBuilder,
+    DisciplinaService,
+    RelatorioService
   ],
 })
 export class RelatorioModule { }
