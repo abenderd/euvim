@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatIconModule, MatSidenavModule, MatCardModule, MatListModule, MatToolbarModule, MatButtonModule } from '@angular/material';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   imports: [
@@ -22,6 +23,9 @@ import { MatIconModule, MatSidenavModule, MatCardModule, MatListModule, MatToolb
     MatToolbarModule,
     MatButtonModule
   ],
-  declarations: [MainComponent]
+  declarations: [MainComponent],
+  providers: [
+    AuthGuard
+  ]
 })
 export class MainModule { }

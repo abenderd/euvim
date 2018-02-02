@@ -8,6 +8,7 @@ import { RelatorioService } from '../relatorio.service';
   styleUrls: ['./presenca.component.scss']
 })
 export class PresencaComponent implements OnInit {
+  public disciplina: any;
   public filtred: boolean;
   
   public relatorio= [];
@@ -35,9 +36,13 @@ export class PresencaComponent implements OnInit {
   gerarRelatorio () {
     this.filtred=true;
     this.relatorio=null;
+
+    this.disciplina = this.disciplinas.find((item) =>  item.id == this.form.value.disciplina );
+
     this._relatorioService.listarPresencaPorDisciplina(this.form.value).subscribe(suc => {
       this.relatorio = suc;
     })
+    
   }
 
 }
